@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript console</title>
+</head>
+<body>
+     <h1>Hello JavaScript</h1> 
+     <h3>Wellcome to Console world</h3>
+
+
+    <script>
+        const a = 'a';
+        console.log(typeof a);
+        
+        function var_test(){
+            console.log(c);
+            console.log(d);
+        }
+        var b = 0;
+        var b = 'b';
+        var b = false;
+        var c = 'hello var';
+        let d = 'hello var';
+        var_test();
+
+        console.clear(); // 기존 콘솔 출력 삭제
+        console.time(); // 프로그램 진행되는 체크 스타트 포인트
+        console.log(typeof console); // 콘솔의 타입은 무엇인가
+        console.log(console); // 콘솔이 어떻게 출력이 되는지
+        console.log(console.log);
+        console.log(" ");
+        const errorMsg = 'the # is not even';
+        for (let number = 2; number <= 5; number += 1) {
+            console.log('the # is ' + number);
+            console.assert(number % 2 === 0, {number: number, errorMsg: errorMsg});
+        }
+        console.log(" ");
+        console.timeLog(); // 시간을 중간기록
+        console.table(console); // 테이블로 출력
+        const table_ = {
+            name: "iksoon",
+            age: "31",
+            com: "handsomefish",
+            phone: "01035203920",
+            address: "soul seochogu",
+        }
+        console.table(table_); // 오브젝트를 테이블로
+        
+        console.log(" ");
+        console.count();
+        console.count();
+        console.count();
+        console.count();
+        console.count(); // 한번 실행될 때 호출 된 수
+        console.countReset();
+        console.count();
+
+
+        console.log(" ");
+        console.profile() // 실행 된 수
+        console.profile() // 실행 된 수
+        console.profileEnd(); // 끝나는
+        
+        
+        
+        console.log(" ");
+        console.timeEnd(); // 시간을 끝내면서 
+
+        console.warn("경고 매시지");
+        console.error("에러 매시지");
+
+        console.group("그룹1");
+        console.dir("??"); // = console.log
+        console.dirxml(table_); 
+        console.info('?');
+        console.context();
+        console.groupCollapsed("그룹1-1");
+        console.info('?');
+
+        console.groupEnd();
+
+        function trace_a (){
+            trace_b();
+        }
+        function trace_b (){
+            trace_C()
+        }
+        function trace_C (){
+            console.log("성시경옵빠 너무 좋아요 ");
+            console.trace();
+        }
+        trace_a();
+
+    </script>
+</body>
+</html>
